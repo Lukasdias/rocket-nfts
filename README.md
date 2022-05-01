@@ -11,5 +11,4 @@ This project uses many tools like:
 - [TypeScript](https://www.typescriptlang.org)
 - [Tailwindcss](https://tailwindcss.com)
 - [Eslint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- 
+- [Prettier](https://prettier.io) 
