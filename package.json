@@ -1,16 +1,11 @@
 {
-  "name": "reactjs-vite-tailwindcss-boilerplate",
-  "description": "This is a React + vite boilerplate to be used with Tailwindcss.",
+  "name": "rocket-nfts",
   "version": "0.4.1",
   "private": true,
   "author": {
-    "name": "João Paulo Moraes",
-    "email": "joaopaulomoraes@outlook.com",
-    "url": "https://github.com/joaopaulomoraes"
-  },
-  "bugs": {
-    "url": "https://github.com/joaopaulomoraes/reactjs-vite-tailwindcss-boilerplate/issues",
-    "email": "joaopaulomoraes@outlook.com"
+    "name": "Lukas Henrique Braga Dias",
+    "email": "diaslukas19@gmail.com",
+    "url": "https://github.com/Lukasdias"
   },
   "scripts": {
     "dev": "vite",
