@@ -1,16 +1,16 @@
-import React, { useState, useCallback } from 'react'
-import { HiX, HiMenu } from 'react-icons/hi'
+import React, { useState, useCallback, useEffect } from 'react'
 
 type Props = {
   active: boolean
 }
 
 export default function Collapse({ active }: Props) {
+  const [animation, setAnimation] = useState<string>('animate-fadeIn')
   return (
     <>
       {active ? (
         <>
-          <section className="w-full bg-white mb-5">
+          <section className={`w-full bg-white mb-5 ${animation}`}>
             <nav className="flex flex-col">
               <button className="p-5 text-lg border-b-2 border-b-gray-700 ">
                 Comprar NFT
