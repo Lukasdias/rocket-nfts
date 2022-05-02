@@ -6,6 +6,8 @@ import { Introduction } from './Introduction/Introduction'
 import { useEffect, useRef } from 'react'
 import LegacyRef from 'react'
 import { Stats } from './Stats/Stats'
+import { Popular } from './Popular/Popular'
+import { BestArtists } from './BestArtists/BestArtists'
 
 function App() {
   return (
@@ -14,8 +16,14 @@ function App() {
         <Header />
         <Introduction />
       </Wrapper>
-      <Wrapper bgColor="bg-rocket-card-color">
+      <Wrapper fScreen bgColor="bg-rocket-card-color">
         <Stats />
+      </Wrapper>
+      <Wrapper>
+        <Popular />
+      </Wrapper>
+      <Wrapper>
+        <BestArtists />
       </Wrapper>
     </div>
   )

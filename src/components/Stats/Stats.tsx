@@ -20,18 +20,18 @@ export function Stats({}: Props) {
     }
   ]
   return (
-    <section className="w-full lg:h-full flex flex-col lg:flex-row">
+    <section className="w-full lg:h-screen flex flex-col lg:flex-row">
       <div className="flex flex-row w-full lg:flex-col lg:w-1/6 /lg:h-screen justify-center items-center border-b-2 border-r-2 border-rocket-subtitle-color">
         {nums.map((n: NumProps, idx: number) => (
           <Nums key={idx} qtd={n.qtd} subtitle={n.subtitle} />
         ))}
       </div>
-      <div className="flex flex-col lg:flex-col w-full justify-center ">
-        <div className="w-full flex flex-col lg:flex-row">
+      <div className="flex flex-col lg:flex-col w-full justify-center">
+        <div className="w-full flex flex-col lg:flex-row lg:mb-5 lg:px-10 lg:py-5">
           <StatArticle />
           <StatArticle />
         </div>
-        <img src={BANNER} alt="banner" className="h-72" />
+        <img src={BANNER} alt="banner" className="w-full h-full" />
       </div>
     </section>
   )

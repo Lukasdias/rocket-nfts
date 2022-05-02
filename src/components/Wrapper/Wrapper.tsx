@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import useIsInViewport from 'use-is-in-viewport'
 
 type Props = {
+  fScreen?: boolean
   children?: any
   bgColor?: string
   bg?: string
@@ -28,7 +29,9 @@ export function Wrapper({ ...props }: Props) {
       style={{ backgroundImage: `url(${props.bg})` }}
     >
       <div
-        className={`relative w-11/12 min-h-screen flex flex-col ${wrapperClass} ${
+        className={`relative ${
+          props.fScreen ? 'w-full' : 'w-11/12'
+        } lg:min-h-screen flex flex-col ${wrapperClass} ${
           wasInViewportAtleastOnce ? 'opacity-1' : 'opacity-0'
         }`}
       >
