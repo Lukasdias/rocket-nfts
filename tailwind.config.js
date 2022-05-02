@@ -8,8 +8,12 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        fadeIn: 'fadeIn 1s ease-in-out',
-        fadeOut: 'fadeOut 1s ease-in-out'
+        pop: 'pop 1s ease-in-out 1 normal forwards',
+        fadeIn: 'fadeIn 1s ease-in-out 1 normal forwards',
+        fadeOut: 'fadeOut 1s ease-in-out 1 normal forwards',
+        fadeInSpin1: 'fadeInSpin 1s ease-in-out 1 normal forwards',
+        fadeInSpin2: 'fadeInSpin 2s ease-in-out 1 normal forwards',
+        fadeInSpin3: 'fadeInSpin 3s ease-in-out 1 normal forwards'
       },
       screens: {
         '3xl': '1800px',
@@ -17,15 +21,20 @@ module.exports = {
       },
       keyframes: {
         fadeOut: {
-          '0%': { opacity: 1 },
-          '100%': { opacity: 0 }
+          '0%': { opacity: 1, transform: 'translateY(0)' },
+          '100%': { opacity: 0, transform: 'translateY(2vh)' }
         },
         fadeIn: {
-          '0%': { opacity: 0, transform: 'translateY(5vh)' },
-          '25%': { opacity: 0, transform: 'translateY(3.75vh)' },
-          '50%': { opacity: 0, transform: 'translateY(2.5vh)' },
-          '75%': { opacity: 0, transform: 'translateY(1.25vh)' },
+          '0%': { opacity: 0, transform: 'translateY(2vh)' },
           '100%': { opacity: 1, transform: 'translateY(0)' }
+        },
+        fadeInSpin: {
+          '0%': { opacity: 0, transform: 'rotate(0)' },
+          '100%': { opacity: 1, transform: 'rotate(360deg)' }
+        },
+        pop: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 }
         }
       },
       colors: {

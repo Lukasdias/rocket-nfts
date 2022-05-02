@@ -3966,6 +3966,11 @@ object.values@^1.1.5:
     define-properties "^1.1.3"
     es-abstract "^1.19.1"
 
+observe-element-in-viewport@0.0.15:
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/observe-element-in-viewport/-/observe-element-in-viewport-0.0.15.tgz#06284e84da80bd43c348ac3d957ba6b99fb2bbd0"
+  integrity sha512-BaJGtCHp8XXxe8zFOnsbv93f4SRLb0W5P3okGJkLLKC9IM9aXvpKF4C8lFxivcS5eROlNkhOCnUOSk4tUnJnKQ==
+
 once@^1.3.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -4221,6 +4226,11 @@ react-dom@^18.1.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.22.0"
+
+react-icons@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
+  integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -4828,6 +4838,13 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-is-in-viewport@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/use-is-in-viewport/-/use-is-in-viewport-1.0.9.tgz#bbc1f2f39ece752c7af0ddcd17b251ba5b4587e2"
+  integrity sha512-Dgi0z/X9eTk3ziI+b28mZVoYtCtyoUFQ+9VBq6fR5EdjqmmsSlbr8ysXAwmEl89OUNBQwVGLGdI9nqwiu3168g==
+  dependencies:
+    observe-element-in-viewport "0.0.15"
 
 util-deprecate@^1.0.2:
   version "1.0.2"
