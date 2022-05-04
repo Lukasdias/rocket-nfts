@@ -22,7 +22,7 @@ type Ref = {
 }
 
 export const Wrapper = forwardRef<Ref, Props>(({ ...props }: Props, ref) => {
-  const wrapperRef = useRef<HTMLElement>(null)
+  const wrapperRef = useRef<any>(null)
   const [isInViewport, targetRef] = useIsInViewport({ threshold: 30 })
   const [wrapperClass, setClass] = useState<string>('')
   const [wasInViewportAtleastOnce, setWasInViewportAtleastOnce] =
