@@ -26,12 +26,12 @@ export function Stats({}: Props) {
           <Nums key={idx} qtd={n.qtd} subtitle={n.subtitle} />
         ))}
       </div>
-      <div className="flex flex-col lg:flex-col w-full justify-center">
-        <div className="w-full flex flex-col lg:flex-row lg:mb-5 lg:px-10 lg:py-5">
+      <div className="flex flex-col lg:flex-col w-full justify-between">
+        <div className="w-full lg:h-full flex flex-col lg:flex-row lg:mb-5 lg:px-10 lg:py-5">
           <StatArticle />
           <StatArticle />
         </div>
-        <img src={BANNER} alt="banner" className="w-full h-full" />
+        <img src={BANNER} alt="banner" className="w-full h-full max-h-96" />
       </div>
     </section>
   )

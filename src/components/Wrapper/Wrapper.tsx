@@ -1,16 +1,29 @@
-import React, { LegacyRef, useState, useEffect } from 'react'
+import React, {
+  LegacyRef,
+  useState,
+  useEffect,
+  forwardRef,
+  useImperativeHandle,
+  useCallback
+} from 'react'
 import { useRef } from 'react'
 import useIsInViewport from 'use-is-in-viewport'
 
 type Props = {
+  autoHeight?: boolean
   fScreen?: boolean
   children?: any
   bgColor?: string
   bg?: string
 }
 
-export function Wrapper({ ...props }: Props) {
-  const [isInViewport, targetRef] = useIsInViewport({ threshold: 50 })
+type Ref = {
+  returnToTop: () => void | null
+}
+
+export const Wrapper = forwardRef<Ref, Props>(({ ...props }: Props, ref) => {
+  const wrapperRef = useRef<HTMLElement>(null)
+  const [isInViewport, targetRef] = useIsInViewport({ threshold: 30 })
   const [wrapperClass, setClass] = useState<string>('')
   const [wasInViewportAtleastOnce, setWasInViewportAtleastOnce] =
     useState(isInViewport)
@@ -22,6 +35,16 @@ export function Wrapper({ ...props }: Props) {
     }
   }, [isInViewport])
 
+  useImperativeHandle(ref, () => ({
+    returnToTop() {
+      console.log('SCROLL')
+      wrapperRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+      })
+    }
+  }))
+
   return (
     <div
       ref={targetRef}
@@ -29,9 +52,10 @@ export function Wrapper({ ...props }: Props) {
       style={{ backgroundImage: `url(${props.bg})` }}
     >
       <div
-        className={`relative ${
-          props.fScreen ? 'w-full' : 'w-11/12'
-        } lg:min-h-screen flex flex-col ${wrapperClass} ${
+        ref={wrapperRef}
+        className={`relative ${props.fScreen ? 'w-full' : 'w-11/12'} ${
+          props.autoHeight ? '' : 'lg:min-h-screen'
+        } flex flex-col ${wrapperClass} ${
           wasInViewportAtleastOnce ? 'opacity-1' : 'opacity-0'
         }`}
       >
@@ -39,4 +63,4 @@ export function Wrapper({ ...props }: Props) {
       </div>
     </div>
   )
-}
+})

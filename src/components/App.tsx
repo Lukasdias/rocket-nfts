@@ -8,11 +8,13 @@ import LegacyRef from 'react'
 import { Stats } from './Stats/Stats'
 import { Popular } from './Popular/Popular'
 import { BestArtists } from './BestArtists/BestArtists'
+import Footer from './Footer/Footer'
 
 function App() {
+  const Intro = useRef(null)
   return (
     <div className="max-w-screen min-h-screen flex flex-col items-center bg-black ">
-      <Wrapper bg={BG1}>
+      <Wrapper ref={Intro} bg={BG1}>
         <Header />
         <Introduction />
       </Wrapper>
@@ -24,6 +26,9 @@ function App() {
       </Wrapper>
       <Wrapper>
         <BestArtists />
+      </Wrapper>
+      <Wrapper autoHeight fScreen bgColor="bg-rocket-card-color">
+        <Footer introRef={Intro} />
       </Wrapper>
     </div>
   )

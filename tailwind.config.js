@@ -7,6 +7,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      transition: {
+        'transition-lazy': 'all 300ms easy-in-out'
+      },
       animation: {
         pop: 'pop 1s ease-in-out 1 normal forwards',
         fadeIn: 'fadeIn 1s ease-in-out 1 normal forwards',

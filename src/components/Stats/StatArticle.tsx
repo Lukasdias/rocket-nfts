@@ -2,7 +2,7 @@ import React from 'react'
 
 export function StatArticle() {
   return (
-    <div className="flex flex-col w-full p-5 lg:px-10">
+    <div className="flex flex-col w-full p-5 lg:px-10 lg:justify-center">
       <p className="mb-7 font-sans text-lg  text-white">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Congue
         malesuada amet pretium lacus. Id{' '}
