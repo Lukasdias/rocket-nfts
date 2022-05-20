@@ -1,7 +1,11 @@
 # Rocket Nfts Challenge 🪙
 
 ### Some screenshots of the production version of the app:
-- 
+
+- Mobile
+  - <img src="https://github.com/Lukasdias/rocket-nfts/blob/main/screenshot-mobile-nft.png?raw=true" width="100%" height="auto" />
+- Desktop
+  - <img src="https://github.com/Lukasdias/rocket-nfts/blob/main/screenshot-desktop-nft.png?raw=true" width="100%" height="auto" />
 
 
 ## What is that 🤔
