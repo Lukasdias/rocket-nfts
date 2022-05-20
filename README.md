@@ -1,10 +1,10 @@
 # Rocket Nfts Challenge 🪙
 
-### Some screenshots of the production version of the app:
+### Some screenshots of the production version of the app 🖼️
 
-- Mobile
+- Mobile 📱
   - <img src="https://github.com/Lukasdias/rocket-nfts/blob/main/screenshot-mobile-nft.png?raw=true" width="100%" height="auto" />
-- Desktop
+- Desktop 🖥️
   - <img src="https://github.com/Lukasdias/rocket-nfts/blob/main/screenshot-desktop-nft.png?raw=true" width="100%" height="auto" />
 
 
@@ -15,7 +15,7 @@
 
 ## What is inside?
 
-### This project uses many tools like:
+### This project uses many tools like 💭
 
 - [ReactJS](https://reactjs.org)
 - [Vite](https://vitejs.dev)
